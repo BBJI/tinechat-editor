@@ -14,6 +14,11 @@ export function getPasteText(e: ClipboardEvent): string {
     // const clipboardData = e.clipboardData || (e.originalEvent && e.originalEvent.clipboardData)
     const clipboardData = e.clipboardData // 暂不考虑 originalEvent 的情况
     let pasteText = ''
+    let images = getPasteImgs(e)
+    if (images.length > 0) {
+        // 有图片，就忽略文字
+        return pasteText
+    }
     if (clipboardData == null) {
         pasteText = (window as any).clipboardData && (window as any).clipboardData.getData('text')
     } else {
@@ -35,6 +40,11 @@ export function getPasteHtml(
 ): string {
     const clipboardData = e.clipboardData // 暂不考虑 originalEvent 的情况
     let pasteHtml = ''
+    let images = getPasteImgs(e)
+    if (images.length > 0) {
+        // 有图片，就忽略文字
+        return pasteHtml
+    }
     if (clipboardData) {
         pasteHtml = clipboardData.getData('text/html')
     }
@@ -66,11 +76,11 @@ export function getPasteHtml(
  */
 export function getPasteImgs(e: ClipboardEvent): File[] {
     const result: File[] = []
-    const txt = getPasteText(e)
-    if (txt) {
-        // 有文字，就忽略图片
-        return result
-    }
+    // const txt = getPasteText(e)
+    // if (txt) {
+    //     // 有文字，就忽略图片
+    //     return result
+    // }
 
     const items = e.clipboardData?.items
 

@@ -369,8 +369,8 @@ class Text {
             // 阻止默认行为，使用 execCommand 的粘贴命令
             e.preventDefault()
 
-            // const pasteEvents = eventHooks.pasteEvents
-            // pasteEvents.forEach(fn => fn(e))
+            const pasteEvents = eventHooks.pasteEvents
+            pasteEvents.forEach(fn => fn(e))
         })
 
         // 撤销/恢复 快捷键
