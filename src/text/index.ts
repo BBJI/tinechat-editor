@@ -335,7 +335,6 @@ class Text {
     
             if(e.keyCode === 13) {
                 e.preventDefault()
-                e.stopPropagation()
                 return
             }
             const enterUpEvents = eventHooks.enterUpEvents
@@ -588,7 +587,6 @@ class Text {
     
             if(e.keyCode === 13) {
                 e.preventDefault()
-                e.stopPropagation()
                 return;			
             }
             const enterDownEvents = eventHooks.enterDownEvents
