@@ -329,10 +329,17 @@ class Text {
 
         // enter 键 up 时的 hooks
         $textElem.on('keyup', (e: KeyboardEvent) => {
-            if (e.keyCode !== 13) return
-            e.preventDefault()
-            // const enterUpEvents = eventHooks.enterUpEvents
-            // enterUpEvents.forEach(fn => fn(e))
+            if(e.keyCode === 13 && e.shiftKey === true) {
+                return
+            }
+    
+            if(e.keyCode === 13) {
+                e.preventDefault()
+                e.stopPropagation()
+                return
+            }
+            const enterUpEvents = eventHooks.enterUpEvents
+            enterUpEvents.forEach(fn => fn(e))
         })
 
         // 键盘 up 时的 hooks
@@ -575,10 +582,17 @@ class Text {
 
         // enter 键 down
         $textElem.on('keydown', (e: KeyboardEvent) => {
-            if (e.keyCode !== 13) return
-            e.preventDefault()
-            // const enterDownEvents = eventHooks.enterDownEvents
-            // enterDownEvents.forEach(fn => fn(e))
+            if(e.keyCode === 13 && e.shiftKey === true) {
+                return
+            }
+    
+            if(e.keyCode === 13) {
+                e.preventDefault()
+                e.stopPropagation()
+                return;			
+            }
+            const enterDownEvents = eventHooks.enterDownEvents
+            enterDownEvents.forEach(fn => fn(e))
         })
 
         // 视频 click
