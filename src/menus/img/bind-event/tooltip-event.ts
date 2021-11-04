@@ -117,19 +117,19 @@ export function createShowHideFn(editor: Editor) {
  * @param editor 编辑器实例
  */
 export default function bindTooltipEvent(editor: Editor) {
-    const { showImgTooltip, hideImgTooltip } = createShowHideFn(editor)
+    // const { showImgTooltip, hideImgTooltip } = createShowHideFn(editor)
 
-    // 点击图片元素是，显示 tooltip
-    // editor.txt.eventHooks.imgClickEvents.push(showImgTooltip)
+    // // 点击图片元素是，显示 tooltip
+    // // editor.txt.eventHooks.imgClickEvents.push(showImgTooltip)
 
-    // 点击其他地方，或者滚动时，隐藏 tooltip
-    editor.txt.eventHooks.clickEvents.push(hideImgTooltip)
-    editor.txt.eventHooks.keyupEvents.push(hideImgTooltip)
-    editor.txt.eventHooks.toolbarClickEvents.push(hideImgTooltip)
-    editor.txt.eventHooks.menuClickEvents.push(hideImgTooltip)
-    editor.txt.eventHooks.textScrollEvents.push(hideImgTooltip)
-    editor.txt.eventHooks.imgDragBarMouseDownEvents.push(hideImgTooltip)
+    // // 点击其他地方，或者滚动时，隐藏 tooltip
+    // editor.txt.eventHooks.clickEvents.push(hideImgTooltip)
+    // editor.txt.eventHooks.keyupEvents.push(hideImgTooltip)
+    // editor.txt.eventHooks.toolbarClickEvents.push(hideImgTooltip)
+    // editor.txt.eventHooks.menuClickEvents.push(hideImgTooltip)
+    // editor.txt.eventHooks.textScrollEvents.push(hideImgTooltip)
+    // editor.txt.eventHooks.imgDragBarMouseDownEvents.push(hideImgTooltip)
 
-    // change 时隐藏
-    editor.txt.eventHooks.changeEvents.push(hideImgTooltip)
+    // // change 时隐藏
+    // editor.txt.eventHooks.changeEvents.push(hideImgTooltip)
 }

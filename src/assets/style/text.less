@@ -21,21 +21,20 @@
         z-index: -1;
     }
 }
+
 .w-e-text {
     padding: 0 10px;
     overflow-y: auto;
     font-size: 14px;
 
-    strong,b {
-        font-weight: normal;
-    }
-
-    code {
-        font-family: auto;
-    }
-
-    li {
+    * {
         list-style: none;
+        font-weight: normal;
+        font-family: auto;
+        font-size: 14px;
+        color: inherit;
+        border: none;
+        font-style: inherit;
     }
 
     // p,h1,h2,h3,h4,h5,table,pre {
@@ -72,24 +71,15 @@
     //     }
     // }
 
-    // table {
-    //     border-top: 1px solid #ccc;
-    //     border-left: 1px solid #ccc;
-
-    //     td,th {
-    //         border-bottom: 1px solid #ccc;
-    //         border-right: 1px solid #ccc;
-    //         padding: 3px 5px;
-    //         min-height: 30px;
-    //         height: 30px;
-    //     }
-
-    //     th {
-    //         border-bottom: 2px solid #ccc;
-    //         text-align: center;
-    //         background-color: #f1f1f1;
-    //     }
-    // }
+    table {
+        td,th {
+            list-style: none;
+            font-weight: normal;
+            font-family: auto;
+            font-size: 14px;
+            color: inherit;
+        }
+    }
 
     &:focus {
         outline: none;

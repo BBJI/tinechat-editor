@@ -55,15 +55,15 @@ function createShowHideFn(editor: Editor) {
 }
 
 export default function bindTooltipEvent(editor: Editor): void {
-    const { showSplitLineTooltip, hideSplitLineTooltip } = createShowHideFn(editor)
+    // const { showSplitLineTooltip, hideSplitLineTooltip } = createShowHideFn(editor)
 
-    // 点击分割线时，显示 tooltip
-    editor.txt.eventHooks.splitLineEvents.push(showSplitLineTooltip)
+    // // 点击分割线时，显示 tooltip
+    // editor.txt.eventHooks.splitLineEvents.push(showSplitLineTooltip)
 
-    // 点击其他地方（工具栏、滚动、keyup）时，隐藏 tooltip
-    editor.txt.eventHooks.clickEvents.push(hideSplitLineTooltip)
-    editor.txt.eventHooks.keyupEvents.push(hideSplitLineTooltip)
-    editor.txt.eventHooks.toolbarClickEvents.push(hideSplitLineTooltip)
-    editor.txt.eventHooks.menuClickEvents.push(hideSplitLineTooltip)
-    editor.txt.eventHooks.textScrollEvents.push(hideSplitLineTooltip)
+    // // 点击其他地方（工具栏、滚动、keyup）时，隐藏 tooltip
+    // editor.txt.eventHooks.clickEvents.push(hideSplitLineTooltip)
+    // editor.txt.eventHooks.keyupEvents.push(hideSplitLineTooltip)
+    // editor.txt.eventHooks.toolbarClickEvents.push(hideSplitLineTooltip)
+    // editor.txt.eventHooks.menuClickEvents.push(hideSplitLineTooltip)
+    // editor.txt.eventHooks.textScrollEvents.push(hideSplitLineTooltip)
 }

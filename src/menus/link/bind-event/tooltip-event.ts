@@ -88,17 +88,17 @@ function createShowHideFn(editor: Editor) {
  * @param editor 编辑器实例
  */
 function bindTooltipEvent(editor: Editor) {
-    const { showLinkTooltip, hideLinkTooltip } = createShowHideFn(editor)
+    // const { showLinkTooltip, hideLinkTooltip } = createShowHideFn(editor)
 
-    // 点击链接元素是，显示 tooltip
-    editor.txt.eventHooks.linkClickEvents.push(showLinkTooltip)
+    // // 点击链接元素是，显示 tooltip
+    // editor.txt.eventHooks.linkClickEvents.push(showLinkTooltip)
 
-    // 点击其他地方，或者滚动时，隐藏 tooltip
-    editor.txt.eventHooks.clickEvents.push(hideLinkTooltip)
-    editor.txt.eventHooks.keyupEvents.push(hideLinkTooltip)
-    editor.txt.eventHooks.toolbarClickEvents.push(hideLinkTooltip)
-    editor.txt.eventHooks.menuClickEvents.push(hideLinkTooltip)
-    editor.txt.eventHooks.textScrollEvents.push(hideLinkTooltip)
+    // // 点击其他地方，或者滚动时，隐藏 tooltip
+    // editor.txt.eventHooks.clickEvents.push(hideLinkTooltip)
+    // editor.txt.eventHooks.keyupEvents.push(hideLinkTooltip)
+    // editor.txt.eventHooks.toolbarClickEvents.push(hideLinkTooltip)
+    // editor.txt.eventHooks.menuClickEvents.push(hideLinkTooltip)
+    // editor.txt.eventHooks.textScrollEvents.push(hideLinkTooltip)
 }
 
 export default bindTooltipEvent

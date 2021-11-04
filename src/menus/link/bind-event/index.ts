@@ -12,7 +12,7 @@ import bindTooltipEvent from './tooltip-event'
  */
 function bindEvent(editor: Editor) {
     // tooltip 事件
-    bindTooltipEvent(editor)
+    // bindTooltipEvent(editor)
 }
 
 export default bindEvent

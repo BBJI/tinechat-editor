@@ -293,17 +293,17 @@ function isMoreRowAction(editor: Editor): boolean {
  * @param editor 编辑器实例
  */
 export default function bindTooltipEvent(editor: Editor) {
-    const { showTableTooltip, hideTableTooltip } = createShowHideFn(editor)
+    // const { showTableTooltip, hideTableTooltip } = createShowHideFn(editor)
 
-    // 点击table元素是，显示 tooltip
-    editor.txt.eventHooks.tableClickEvents.push(showTableTooltip)
+    // // 点击table元素是，显示 tooltip
+    // editor.txt.eventHooks.tableClickEvents.push(showTableTooltip)
 
-    // 点击其他地方，或者滚动时，隐藏 tooltip
-    editor.txt.eventHooks.clickEvents.push(hideTableTooltip)
-    editor.txt.eventHooks.keyupEvents.push(hideTableTooltip)
-    editor.txt.eventHooks.toolbarClickEvents.push(hideTableTooltip)
-    editor.txt.eventHooks.menuClickEvents.push(hideTableTooltip)
-    editor.txt.eventHooks.textScrollEvents.push(hideTableTooltip)
+    // // 点击其他地方，或者滚动时，隐藏 tooltip
+    // editor.txt.eventHooks.clickEvents.push(hideTableTooltip)
+    // editor.txt.eventHooks.keyupEvents.push(hideTableTooltip)
+    // editor.txt.eventHooks.toolbarClickEvents.push(hideTableTooltip)
+    // editor.txt.eventHooks.menuClickEvents.push(hideTableTooltip)
+    // editor.txt.eventHooks.textScrollEvents.push(hideTableTooltip)
 }
 
 /**

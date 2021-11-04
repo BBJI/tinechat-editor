@@ -10,7 +10,7 @@ import bindTooltipEvent from './tooltip-event'
  */
 function bindEvent(editor: Editor) {
     // 分割线的 tooltip 事件
-    bindTooltipEvent(editor)
+    // bindTooltipEvent(editor)
 }
 
 export default bindEvent

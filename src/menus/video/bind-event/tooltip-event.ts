@@ -123,18 +123,18 @@ export function createShowHideFn(editor: Editor) {
  * @param editor 编辑器实例
  */
 export default function bindTooltipEvent(editor: Editor) {
-    const { showVideoTooltip, hideVideoTooltip } = createShowHideFn(editor)
+    // const { showVideoTooltip, hideVideoTooltip } = createShowHideFn(editor)
 
-    // 点击视频元素是，显示 tooltip
-    editor.txt.eventHooks.videoClickEvents.push(showVideoTooltip)
+    // // 点击视频元素是，显示 tooltip
+    // editor.txt.eventHooks.videoClickEvents.push(showVideoTooltip)
 
-    // 点击其他地方，或者滚动时，隐藏 tooltip
-    editor.txt.eventHooks.clickEvents.push(hideVideoTooltip)
-    editor.txt.eventHooks.keyupEvents.push(hideVideoTooltip)
-    editor.txt.eventHooks.toolbarClickEvents.push(hideVideoTooltip)
-    editor.txt.eventHooks.menuClickEvents.push(hideVideoTooltip)
-    editor.txt.eventHooks.textScrollEvents.push(hideVideoTooltip)
+    // // 点击其他地方，或者滚动时，隐藏 tooltip
+    // editor.txt.eventHooks.clickEvents.push(hideVideoTooltip)
+    // editor.txt.eventHooks.keyupEvents.push(hideVideoTooltip)
+    // editor.txt.eventHooks.toolbarClickEvents.push(hideVideoTooltip)
+    // editor.txt.eventHooks.menuClickEvents.push(hideVideoTooltip)
+    // editor.txt.eventHooks.textScrollEvents.push(hideVideoTooltip)
 
-    // change 时隐藏
-    editor.txt.eventHooks.changeEvents.push(hideVideoTooltip)
+    // // change 时隐藏
+    // editor.txt.eventHooks.changeEvents.push(hideVideoTooltip)
 }

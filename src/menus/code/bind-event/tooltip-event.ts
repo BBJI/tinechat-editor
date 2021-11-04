@@ -92,14 +92,14 @@ function preEnterListener(e: KeyboardEvent, editor: Editor) {
  * @param editor 编辑器实例
  */
 export default function bindTooltipEvent(editor: Editor) {
-    const { showCodeTooltip, hideCodeTooltip } = createShowHideFn(editor)
+    // const { showCodeTooltip, hideCodeTooltip } = createShowHideFn(editor)
 
-    // 点击代码元素时，显示 tooltip
-    editor.txt.eventHooks.codeClickEvents.push(showCodeTooltip)
+    // // 点击代码元素时，显示 tooltip
+    // editor.txt.eventHooks.codeClickEvents.push(showCodeTooltip)
 
-    // 点击其他地方，或者滚动时，隐藏 tooltip
-    editor.txt.eventHooks.clickEvents.push(hideCodeTooltip)
-    editor.txt.eventHooks.toolbarClickEvents.push(hideCodeTooltip)
-    editor.txt.eventHooks.menuClickEvents.push(hideCodeTooltip)
-    editor.txt.eventHooks.textScrollEvents.push(hideCodeTooltip)
+    // // 点击其他地方，或者滚动时，隐藏 tooltip
+    // editor.txt.eventHooks.clickEvents.push(hideCodeTooltip)
+    // editor.txt.eventHooks.toolbarClickEvents.push(hideCodeTooltip)
+    // editor.txt.eventHooks.menuClickEvents.push(hideCodeTooltip)
+    // editor.txt.eventHooks.textScrollEvents.push(hideCodeTooltip)
 }
