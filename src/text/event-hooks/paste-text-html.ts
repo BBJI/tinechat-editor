@@ -74,18 +74,6 @@ function isEmptyParagraph(topElem: DomElement | undefined): boolean {
     return dom.nodeName === 'P' && dom.innerHTML === '<br>'
 }
 
-// html转string
-const htmlToString = (html: any): any => {
-	let temp: any = document.createElement("div");
-	(temp.textContent != undefined ) ? (temp.textContent = html) : (temp.innerText = html);
-	var output = temp.innerHTML;
-	temp = null;
-	output = output.replace(new RegExp("\n","gm"),"<br/>")
-	output = output.replace(new RegExp(" ","gm"),"&nbsp;")
-	console.log(html, output)
-	return output;
-}
-
 /**
  * 粘贴文本和 html
  * @param editor 编辑器对象
@@ -94,9 +82,9 @@ const htmlToString = (html: any): any => {
 function pasteTextHtml(editor: Editor, pasteEvents: Function[]) {
     function fn(e: Event) {
         window.navigator.clipboard.readText().then(text => {
-            editor.cmd.do('insertHTML', htmlToString(text));
+            editor.cmd.do('insertText', text);
         })
-        
+
         // // 获取配置
         // const config = editor.config
         // const pasteFilterStyle = config.pasteFilterStyle
