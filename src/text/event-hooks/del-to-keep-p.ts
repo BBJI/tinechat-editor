@@ -53,7 +53,7 @@ function deleteToKeepP(editor: Editor, deleteUpEvents: Function[], deleteDownEve
             editor.selection.moveCursor($selectionElem.getNode(), 0)
         }
     }
-    deleteUpEvents.push(upFn)
+    // deleteUpEvents.push(upFn)
 
     function downFn(e: Event) {
         const $textElem = editor.$textElem
