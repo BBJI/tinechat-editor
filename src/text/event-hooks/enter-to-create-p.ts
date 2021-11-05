@@ -70,7 +70,7 @@ function enterToCreateP(editor: Editor, enterUpEvents: Function[], enterDownEven
         // 插入 <p> ，并将选取定位到 <p>，删除当前标签
         insertEmptyP($selectionElem)
     }
-    enterUpEvents.push(fn)
+    // enterUpEvents.push(fn)
 
     // enter down 时
     function createPWhenEnterText(e: Event) {
