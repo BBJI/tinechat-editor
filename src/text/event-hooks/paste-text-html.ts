@@ -81,10 +81,18 @@ function isEmptyParagraph(topElem: DomElement | undefined): boolean {
  */
 function pasteTextHtml(editor: Editor, pasteEvents: Function[]) {
     function fn(e: Event) {
-        window.navigator.clipboard.readText().then(text => {
-            editor.cmd.do('insertText', text);
+        let clipboard: any = window.navigator.clipboard
+        clipboard.read().then((item: any) => {
+            if(item[0].types.findIndex((val: any) => {return val.indexOf('image') > -1}) > -1) { // 判定是否截取excel中区块，是则以图片格式粘贴
+                e.preventDefault()
+            }else{
+                clipboard.readText().then((text: any) => { // 是否剪切板是文字，不是则粘贴文件
+                    if(text){
+                        editor.cmd.do('insertText', text)
+                    }
+                })
+            }
         })
-
         // // 获取配置
         // const config = editor.config
         // const pasteFilterStyle = config.pasteFilterStyle
