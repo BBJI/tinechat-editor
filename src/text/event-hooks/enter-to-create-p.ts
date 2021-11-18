@@ -81,7 +81,7 @@ function enterToCreateP(editor: Editor, enterUpEvents: Function[], enterDownEven
             // 回车时，默认创建了 text 标签（没有 p 标签包裹），父元素直接就是 $textElem
             // 例如，光标放在 table 最后侧，回车时，默认就是这个情况
             e.preventDefault()
-            editor.cmd.do('insertHTML', '<p><br></p>')
+            // editor.cmd.do('insertHTML', '<p><br></p>')
         }
     }
     enterDownEvents.push(createPWhenEnterText)
